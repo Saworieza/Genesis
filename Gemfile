@@ -8,6 +8,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 #user roles
 gem 'pundit'
+gem 'cancancan', '~> 1.10' #prefered
 
 #chat with private pub and thin to srve faye
 gem "private_pub"
