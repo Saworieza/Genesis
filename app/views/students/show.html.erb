@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @student.image.url %>
+</p>
 
 <p>
   <strong>Full name:</strong>
@@ -7,7 +11,7 @@
 
 <p>
   <strong>Birth date:</strong>
-  <%= @student.birth_date %>
+  <%= @student.birth_date.strftime('%B %-d, %Y') %>
 </p>
 
 <p>
@@ -22,12 +26,7 @@
 
 <p>
   <strong>Form:</strong>
-  <%= @student.form %>
-</p>
-
-<p>
-  <strong>Stream:</strong>
-  <%= @student.stream %>
+  <%= @student.form %> <%= @student.stream %>
 </p>
 
 <p>
@@ -41,13 +40,8 @@
 </p>
 
 <p>
-  <strong>Phone1:</strong>
-  <%= @student.phone1 %>
-</p>
-
-<p>
-  <strong>Phone2:</strong>
-  <%= @student.phone2 %>
+  <strong>Phone:</strong>
+  <%= @student.phone1 %>, <%= @student.phone2 %>
 </p>
 
 <p>
@@ -66,4 +60,5 @@
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Destroy', @student, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', students_path %>

@@ -1,0 +1,91 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @teacher_detail.image.url %>
+</p>
+
+<p>
+  <strong>Employer:</strong>
+  <%= @teacher_detail.employer %>
+</p>
+
+<p>
+  <strong>Employee number:</strong>
+  <%= @teacher_detail.employee_number %>
+</p>
+
+<p>
+  <strong>Employment date:</strong>
+  <%= @teacher_detail.employment_date.strftime('%B %-d, %Y') %>
+</p>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @teacher_detail.full_name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @teacher_detail.gender %>
+</p>
+
+<p>
+  <strong>Birth date:</strong>
+  <%= @teacher_detail.birth_date.strftime('%B %-d, %Y') %>
+</p>
+
+<p>
+  <strong>Marital status:</strong>
+  <%= @teacher_detail.marital_status %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @teacher_detail.nationality %>
+</p>
+
+<p>
+  <strong>Home address:</strong>
+  <%= @teacher_detail.home_address %>
+</p>
+
+<p>
+  <strong>Phone :</strong>
+  <%= @teacher_detail.phone_1 %>, <%= @teacher_detail.phone_2 %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @teacher_detail.email %>
+</p>
+
+<p>
+  <strong>Town:</strong>
+  <%= @teacher_detail.town %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @teacher_detail.county %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @teacher_detail.education %>
+</p>
+
+<p>
+  <strong>Certifications:</strong>
+  <%= @teacher_detail.certifications %>
+</p>
+
+<p>
+  <strong>Subjects:</strong>
+  <%= @teacher_detail.subjects %>
+</p>
+
+<%= link_to 'Edit', edit_teacher_detail_path(@teacher_detail) %> |
+<%= link_to 'Delete', @teacher_detail, method: :delete, data: { confirm: 'Are you sure?' } %> |
+
+<%= link_to 'Back', teacher_details_path %>
+

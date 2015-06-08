@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529170709) do
+ActiveRecord::Schema.define(version: 20150530055926) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -53,6 +53,29 @@ ActiveRecord::Schema.define(version: 20150529170709) do
     t.string   "class_teacher"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "disciplines", force: :cascade do |t|
+    t.date     "incident_date"
+    t.string   "student"
+    t.integer  "admission_number"
+    t.text     "details"
+    t.text     "action_taken"
+    t.string   "attach_files"
+    t.string   "email_subject"
+    t.text     "email_message"
+    t.string   "email_address"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.date     "event_date"
+    t.time     "event_time"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "libraries", force: :cascade do |t|
@@ -128,8 +151,12 @@ ActiveRecord::Schema.define(version: 20150529170709) do
     t.string   "email"
     t.string   "town"
     t.string   "county"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -138,6 +165,32 @@ ActiveRecord::Schema.define(version: 20150529170709) do
     t.string   "priority"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "teacher_details", force: :cascade do |t|
+    t.string   "employer"
+    t.string   "employee_number"
+    t.date     "employment_date"
+    t.string   "full_name"
+    t.date     "birth_date"
+    t.string   "marital_status"
+    t.string   "nationality"
+    t.string   "home_address"
+    t.integer  "phone_1"
+    t.integer  "phone_2"
+    t.string   "email"
+    t.string   "town"
+    t.string   "county"
+    t.text     "education"
+    t.text     "certifications"
+    t.text     "subjects"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "gender"
   end
 
   create_table "teachers", force: :cascade do |t|

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :teacher_details
+  resources :disciplines
+  resources :events
   resources :students
   resources :pay_others
   resources :pay_fees

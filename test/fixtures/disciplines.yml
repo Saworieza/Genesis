@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  incident_date: 2015-05-30
+  student: MyString
+  admission_number: 1
+  details: MyText
+  action_taken: MyText
+  attach_files: MyString
+  email_subject: MyString
+  email_message: MyText
+  email_address: MyString
+
+two:
+  incident_date: 2015-05-30
+  student: MyString
+  admission_number: 1
+  details: MyText
+  action_taken: MyText
+  attach_files: MyString
+  email_subject: MyString
+  email_message: MyText
+  email_address: MyString
